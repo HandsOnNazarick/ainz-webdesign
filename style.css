@@ -782,6 +782,80 @@ img {
 }
 
 /* ============================================
+   Demo (Maison Verte live link)
+   ============================================ */
+
+.demo-cta {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    transition: var(--transition);
+}
+
+.demo-cta:hover {
+    border-color: var(--gold);
+}
+
+.demo-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.demo-info p {
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.demo-tech {
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.demo-tech h4 {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.demo-tech ul {
+    list-style: none;
+}
+
+.demo-tech li {
+    color: var(--text-dim);
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.demo-tech li:last-child {
+    border-bottom: none;
+}
+
+.demo-tech li::before {
+    content: "→";
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .demo-cta {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+}
+
+/* ============================================
    Mobile responsive
    ============================================ */
 
