@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# build / OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.swp
+*.bak
+
+# local-only / secrets
+.env
+.env.local
+*.local
