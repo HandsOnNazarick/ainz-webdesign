@@ -20,7 +20,7 @@ ainz-web-design/
 ```
 
 ## Sections du site
-1. **Hero** — titre + CTA téléphone (076 579 85 30) + bouton devis, mention "à partir de 300 CHF"
+1. **Hero** — titre + CTA téléphone (076 579 85 30) + bouton devis, mention "à partir de 600 CHF"
 2. **Services** — 2 cartes : Option A (statique pur, je gère tout) / Option B (avec CMS, le client gère)
 3. **Démo** — encart "Voir la démo live" → La Pause sur `https://handsonnazarick.github.io/demo-restaurant-public/`
 4. **Processus** — 4 étapes (appel → maquette → réalisation → livraison)
@@ -28,10 +28,10 @@ ainz-web-design/
 6. **Contact** — téléphone + WhatsApp + email + liens footer vers le matériel commercial
 
 ## Positionnement tarifaire
-À partir de **300 CHF** (point d'entrée), 3 niveaux selon la complexité :
-- **300 CHF** — site 1 page, présence de base
-- **500–700 CHF** — site multi-pages, SEO local, design personnalisé
-- **800–1200 CHF** — multi-pages avancé, réservation en ligne, multilingue
+À partir de **600 CHF** (point d'entrée), 3 niveaux selon la complexité (updated 2026-10-06, formerly 300 / 500-700 / 800-1200) :
+- **600 CHF** — site 1 page, présence de base
+- **1200 CHF** — site multi-pages, SEO local, design personnalisé
+- **2000 CHF** — multi-pages avancé, réservation en ligne, multilingue
 
 ## Contact
 - Téléphone : 076 579 85 30
