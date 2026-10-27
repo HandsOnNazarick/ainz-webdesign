@@ -68,7 +68,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Site vitrine 1 page",
-              "description": "Site one-page avec design sur mesure, mobile-first, SEO de base, hébergement et domaine .ch inclus"
+              "description": "Site one-page avec design sur mesure, mobile-first, référencement de base, hébergement et domaine .ch inclus"
             },
             "price": "600",
             "priceCurrency": "CHF"
@@ -92,6 +92,16 @@
             },
             "price": "2000",
             "priceCurrency": "CHF"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Refonte de site existant",
+              "description": "Audit, refonte design et SEO d'un site existant. Devis sur mesure après diagnostic gratuit."
+            },
+            "price": "900",
+            "priceCurrency": "CHF"
           }
         ]
       },
@@ -113,15 +123,15 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-mark">▲</span>
                 <span class="logo-text">AINZ WEB DESIGN</span>
             </a>
             <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#examples">Démo</a>
-                <a href="#process">Processus</a>
-                <a href="#contact" class="nav-cta">Contact</a>
+                <a href="services.html">Services</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="fribourg.html">Fribourg</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
             </div>
             <button class="nav-toggle" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -135,18 +145,19 @@
         <div class="container hero-content">
             <div class="hero-badge">📍 Suisse romande · Fribourg · Lausanne · Berne</div>
             <h1 class="hero-title">
-                Un site web pro<br>
-                <span class="gold">pour votre commerce</span>
+                Un site web qui<br>
+                <span class="gold">rapporte des clients</span>
             </h1>
             <p class="hero-subtitle">
-                À partir de <strong>600 CHF</strong>. Livraison en 2-3 semaines.
-                Pas d'abonnement, pas de bullshit — juste un site qui travaille pour vous.
+                Pas un site pour faire joli. Un site fait pour que vos clients vous trouvent
+                et vous contactent. Dès <strong>600 CHF</strong>, livré en 2-3 semaines,
+                sans abonnement.
             </p>
             <div class="hero-cta">
                 <a href="tel:+41765798530" class="btn btn-primary">
                     📞 076 579 85 30
                 </a>
-                <a href="#contact" class="btn btn-secondary">
+                <a href="contact.html" class="btn btn-secondary">
                     📧 Demander un devis gratuit
                 </a>
             </div>
@@ -172,46 +183,60 @@
         <div class="container">
             <div class="section-head">
                 <span class="section-tag">SERVICES</span>
-                <h2>Pour qui ?</h2>
-                <p>Coiffeurs, restaurants, artisans, médecins, commerces. Sites vitrines pensés pour la Suisse.</p>
+                <h2>Trois formules, un même objectif</h2>
+                <p>Que votre site soit à créer ou à retravailler, le but est le même : des clients qui vous trouvent et qui vous contactent.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card pricing-featured">
                     <div class="pricing-badge">DÈS 600 CHF</div>
                     <div class="service-icon">⚡</div>
-                    <h3>Option A — Statique pur</h3>
-                    <p>Je crée le site, je gère tout. Tu m'appelles à chaque modif. Zéro compétence technique requise de ton côté.</p>
-                    <ul class="pricing-features" style="margin-top:16px;text-align:left;">
+                    <h3>Option A — Site statique</h3>
+                    <p>Je crée le site, je gère tout. Vous m'appelez à chaque modif. Zéro compétence technique requise de votre côté.</p>
+                    <ul class="pricing-features">
                         <li>Site 1 page ou multi-pages selon besoin</li>
-                        <li>Design from scratch (pas de template)</li>
-                        <li>Mobile-first, SEO de base</li>
-                        <li>Hébergement Netlify configuré</li>
-                        <li>Domaine <code>.ch</code> ou <code>.com</code> à ton nom (~12-15 CHF/an)</li>
-                        <li>Code source dans un repo GitHub à ton nom</li>
+                        <li>Design créé de zéro (pas de template)</li>
+                        <li>Mobile-first, référencement de base</li>
+                        <li>Hébergement GitHub Pages inclus (gratuit, 0 CHF)</li>
+                        <li>Domaine <code>.ch</code> ou <code>.com</code> à votre nom (~15 CHF/an)</li>
+                        <li>Code source dans un repo GitHub à votre nom</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary" style="margin-top:24px;">Demander un devis</a>
+                    <a href="contact.html" class="btn btn-primary">Demander un devis</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛠</div>
                     <h3>Option B — Avec CMS</h3>
-                    <p>Tu modifies ton site toi-même via une interface admin. Aucune ligne de code. Idéal si tu changes souvent menu / prix / photos.</p>
-                    <ul class="pricing-features" style="margin-top:16px;text-align:left;">
+                    <p>Vous modifiez votre site vous-même via une interface admin. Aucune ligne de code. Idéal si vous changez souvent menu, prix ou photos.</p>
+                    <ul class="pricing-features">
                         <li>Tout de l'Option A +</li>
                         <li>Interface admin <code>/admin/</code> (Decap CMS open-source)</li>
                         <li>Modification autonome : menu, photos, horaires, tarifs</li>
                         <li>Formation à l'usage (~1h)</li>
                         <li>Compte GitHub requis (gratuit, 2 min)</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline" style="margin-top:24px;">Demander un devis</a>
+                    <a href="contact.html" class="btn btn-outline">Demander un devis</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔁</div>
+                    <h3>Option C — Refonte</h3>
+                    <p>Vous avez déjà un site, mais il ne vous rapporte rien ? Je le retravaille : nouveau design, contenu remis à jour, référencement réparé. Vos contenus et vos photos sont conservés.</p>
+                    <ul class="pricing-features">
+                        <li><strong>Audit gratuit</strong> de votre site actuel avant devis</li>
+                        <li>Refonte design complète, à votre image</li>
+                        <li>Vos contenus, vos photos et vos coordonnées conservés</li>
+                        <li>Référencement local et structure réparés</li>
+                        <li>Migré sur un domaine <code>.ch</code> à votre nom si besoin</li>
+                        <li>Depuis <strong>900 CHF</strong>, devis sur mesure</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Demander un audit gratuit</a>
                 </div>
             </div>
             <p class="pricing-note">
-                💡 On démarre toujours simple (à partir de 600 CHF) et on fait évoluer selon tes besoins. Tout est à toi, pas d'abonnement caché.
+                💡 On démarre toujours simple (à partir de 600 CHF) et on fait évoluer selon vos besoins. Tout est à vous, pas d'abonnement caché.
             </p>
         </div>
     </section>
 
-    <!-- Examples -->
+    <!-- Realisations preview -->
     <section id="examples" class="section">
         <div class="container">
             <div class="section-head">
@@ -233,11 +258,14 @@
                     <ul>
                         <li>HTML/CSS/JS vanilla (zéro framework)</li>
                         <li>Decap CMS pour l'édition autonome</li>
-                        <li>Hébergement Netlify (CDN mondial, HTTPS auto)</li>
+                        <li>Hébergement GitHub Pages (CDN mondial, HTTPS automatique)</li>
                         <li>Fonts Fraunces + Inter (Google Fonts)</li>
                         <li>Code source dans un repo GitHub privé</li>
                     </ul>
                 </div>
+            </div>
+            <div style="text-align:center;margin-top:32px;">
+                <a href="realisations.html" class="btn btn-outline btn-large">Voir toutes mes réalisations →</a>
             </div>
         </div>
     </section>
@@ -283,13 +311,16 @@
                 <h2>Pourquoi Ainz Web Design ?</h2>
                 <p>
                     Je crée des sites simples et efficaces pour les commerces locaux de Suisse romande.
-                    Pas de bullshit, pas d'abonnement, pas de "forfait maintenance" caché.
+                    Pas de bullshit, pas d'abonnement, pas de « forfait maintenance » caché.
                     Juste un site propre qui donne une image pro à votre commerce — et qui ramène des clients.
                 </p>
                 <div class="about-meta">
                     <div>📍 Suisse romande (Fribourg · Lausanne · Berne)</div>
                     <div>📞 <a href="tel:+41765798530">076 579 85 30</a></div>
                     <div>✉️ <a href="mailto:nazarick963@gmail.com">nazarick963@gmail.com</a></div>
+                </div>
+                <div style="margin-top:32px;">
+                    <a href="fribourg.html" class="btn btn-outline">Vous êtes à Fribourg ? →</a>
                 </div>
             </div>
         </div>
@@ -301,7 +332,7 @@
             <div class="cta-content">
                 <span class="section-tag gold">CONTACT</span>
                 <h2>Prêt à avoir votre site ?</h2>
-                <p>Appelez-moi, ou envoyez-moi un message. Réponse sous 24h.</p>
+                <p>Appelez-moi, ou envoyez-moi un message. Réponse sous 24 h.</p>
                 <div class="cta-buttons">
                     <a href="tel:+41765798530" class="btn btn-primary btn-large">
                         📞 076 579 85 30
@@ -314,6 +345,9 @@
                        class="btn btn-outline btn-large">
                         ✉️ Email
                     </a>
+                </div>
+                <div style="margin-top:24px;">
+                    <a href="contact.html" class="btn btn-outline btn-large">Décrire votre projet →</a>
                 </div>
             </div>
         </div>
@@ -329,16 +363,15 @@
                 </div>
                 <p class="footer-tagline">Sites web pour commerces locaux — Suisse romande</p>
                 <div class="footer-links">
-                    <a href="#services">Services</a>
-                    <a href="#examples">Démo</a>
-                    <a href="#process">Processus</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://github.com/HandsOnNazarick/site-services/tree/main/commercial"
-                       target="_blank" rel="noopener">📦 Matériel commercial</a>
+                    <a href="index.html">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="realisations.html">Réalisations</a>
+                    <a href="fribourg.html">Fribourg</a>
+                    <a href="contact.html">Contact</a>
                     <a href="https://handsonnazarick.github.io/demo-restaurant-public/"
-                       target="_blank" rel="noopener">🌿 Démo Maison Verte</a>
+                       target="_blank" rel="noopener">🌿 Démo</a>
                 </div>
-                <p class="footer-copy">© 2026 Ainz Web Design · Suisse · <a href="https://github.com/HandsOnNazarick/ainz-webdesign" target="_blank" rel="noopener" style="color:var(--gold);">Code source sur GitHub</a></p>
+                <p class="footer-copy">© 2026 Ainz Web Design · Suisse romande</p>
             </div>
         </div>
     </footer>

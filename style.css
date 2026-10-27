@@ -183,6 +183,7 @@ img {
     font-size: 13px;
     color: var(--text-dim);
     margin-bottom: 32px;
+    max-width: 100%;
 }
 
 .hero-title {
@@ -356,6 +357,11 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
+    align-items: stretch;
+}
+
+.services-grid .service-card {
+    height: 100%;
 }
 
 .service-card {
@@ -364,6 +370,19 @@ img {
     border-radius: var(--radius-lg);
     padding: 32px;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card > .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    min-width: 200px;
+    text-align: center;
+}
+
+.service-card .pricing-features {
+    margin-bottom: 24px;
 }
 
 .service-card:hover {
@@ -859,6 +878,478 @@ img {
    Mobile responsive
    ============================================ */
 
+/* ============================================
+   Multi-page : navigation + shared blocks
+   ============================================ */
+
+.nav-links a[href$=".html"] {
+    color: var(--text-dim);
+}
+
+/* Page hero (pages internes) */
+.page-hero {
+    position: relative;
+    padding: 150px 0 80px;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero .hero-bg {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.13) 0%, transparent 55%),
+        radial-gradient(ellipse at 15% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 45%);
+}
+
+.page-hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-hero p {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    color: var(--text-dim);
+    max-width: 680px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.page-hero .hero-cta {
+    margin-bottom: 0;
+}
+
+/* Fil d'Ariane */
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: var(--text-dim);
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb span {
+    color: var(--gold);
+}
+
+/* Grille de contenu (page interne) */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+/* Bloc de texte éditorial (SEO) */
+.prose {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.prose h2 {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 56px 0 20px;
+}
+
+.prose h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 36px 0 12px;
+    color: var(--gold);
+}
+
+.prose p {
+    color: var(--text-dim);
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+.prose ul {
+    list-style: none;
+    margin: 0 0 24px;
+}
+
+.prose ul li {
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 8px 0 8px 28px;
+    position: relative;
+}
+
+.prose ul li::before {
+    content: "→";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.prose strong {
+    color: var(--text);
+}
+
+/* Carte de realization (portfolio) */
+.work-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+}
+
+.work-visual {
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-card) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.work-visual .work-glyph {
+    font-size: 64px;
+    opacity: 0.9;
+}
+
+.work-visual .work-label {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid var(--border-light);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+}
+
+.work-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.work-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.work-meta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.work-meta span {
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+}
+
+.work-body p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.work-result {
+    background: var(--bg-alt);
+    border-left: 2px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.work-result strong {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.work-result p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.work-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+/* Tableau comparatif (offre) */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.compare-table thead th {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--bg-alt);
+}
+
+.compare-table td {
+    color: var(--text-dim);
+}
+
+.compare-table td:first-child {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.compare-table tbody tr:hover {
+    background: var(--bg-card);
+}
+
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 14px;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--border-light);
+}
+
+.faq-item h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.faq-item p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Formulaire de contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.03em;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    background: var(--bg-alt);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-field select {
+    cursor: pointer;
+}
+
+.form-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+/* Cartes de zone geographique */
+.zone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.zone-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.zone-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.zone-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.zone-card p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* Bandeau mise en avant */
+.highlight-band {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, var(--bg-card) 70%);
+    border: 1px solid var(--gold);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.highlight-band h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.highlight-band p {
+    color: var(--text-dim);
+    font-size: 17px;
+    max-width: 620px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .page-hero {
+        padding: 120px 0 60px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -881,6 +1372,19 @@ img {
 
     .nav-toggle {
         display: flex;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 7px 13px;
+        line-height: 1.5;
+        white-space: normal;
+    }
+
+    .pricing-badge {
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
     }
 
     .nav-toggle.active span:nth-child(1) {
